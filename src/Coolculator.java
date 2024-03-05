@@ -47,6 +47,7 @@ public class Coolculator implements ActionListener {
         negButton = new RoundedButton("+/-");
         equButton = new RoundedButton("=");
 
+
         addButton.setBackground(new Color(255, 204, 0));
         addButton.setForeground(Color.WHITE);
         subButton.setBackground(new Color(255, 204, 0));
@@ -55,14 +56,15 @@ public class Coolculator implements ActionListener {
         mulButton.setForeground(Color.WHITE);
         divButton.setBackground(new Color(255, 204, 0));
         divButton.setForeground(Color.WHITE);
-        perButton.setBackground(new Color(255, 204, 0));
-        perButton.setForeground(Color.WHITE);
-        delButton.setBackground(new Color(175, 175, 175));
-        clrButton.setBackground(new Color(175, 175, 175));
-        negButton.setBackground(new Color(175, 175, 175));
-        equButton.setBackground(new Color(90, 90, 90));
+        perButton.setBackground(new Color(150, 150, 150));
+        perButton.setForeground(Color.BLACK);
+        delButton.setBackground(new Color(50, 50, 50));
+        delButton.setForeground(Color.WHITE);
+        clrButton.setBackground(new Color(150, 150, 150));
+        negButton.setBackground(new Color(150, 150, 150));
+        equButton.setBackground(new Color(255, 204, 0));
         equButton.setForeground(Color.WHITE);
-        decButton.setBackground(new Color(90, 90, 90));
+        decButton.setBackground(new Color(50, 50, 50));
         decButton.setForeground(Color.WHITE);
 
         functionButtons[0] = addButton;
@@ -88,7 +90,7 @@ public class Coolculator implements ActionListener {
             numberButtons[i].addActionListener(this);
             numberButtons[i].setFont(myFont);
             numberButtons[i].setFocusable(false);
-            numberButtons[i].setBackground(new Color(90, 90, 90));
+            numberButtons[i].setBackground(new Color(50, 50, 50));
             numberButtons[i].setForeground(Color.WHITE);
         }
 
@@ -97,26 +99,27 @@ public class Coolculator implements ActionListener {
         panel.setLayout(new GridLayout(5, 5, 10, 10));
         panel.setBackground(Color.black);
 
-        panel.add(numberButtons[1]);
-        panel.add(numberButtons[2]);
-        panel.add(numberButtons[3]);
-        panel.add(addButton);
-        panel.add(numberButtons[4]);
-        panel.add(numberButtons[5]);
-        panel.add(numberButtons[6]);
-        panel.add(subButton);
+        panel.add(clrButton);
+        panel.add(negButton);
+        panel.add(perButton);
+        panel.add(divButton);
         panel.add(numberButtons[7]);
         panel.add(numberButtons[8]);
         panel.add(numberButtons[9]);
         panel.add(mulButton);
-        panel.add(decButton);
-        panel.add(numberButtons[0]);
-        panel.add(equButton);
-        panel.add(divButton);
+        panel.add(numberButtons[4]);
+        panel.add(numberButtons[5]);
+        panel.add(numberButtons[6]);
+        panel.add(subButton);
+        panel.add(numberButtons[1]);
+        panel.add(numberButtons[2]);
+        panel.add(numberButtons[3]);
+        panel.add(addButton);
+        panel.add(numberButtons[0]); // 0 button
+        panel.add(decButton); // Decimal button
         panel.add(delButton);
-        panel.add(clrButton);
-        panel.add(negButton);
-        panel.add(perButton);
+        panel.add(equButton); // Equal button
+
 
         frame.add(panel);
         frame.add(textField);

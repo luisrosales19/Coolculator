@@ -37,6 +37,9 @@ public class RoundedButton extends JButton {
     @Override
     public Dimension getPreferredSize() {
         Dimension size = super.getPreferredSize();
+        if(getText().equals("0")) {
+            size.width *= 2;
+        }
         int max = Math.max(size.width, size.height);
         setPreferredSize(new Dimension(max, max)); // Force button to be circular
         return new Dimension(max, max);
